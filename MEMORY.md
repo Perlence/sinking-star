@@ -2,6 +2,7 @@
 
 - Pressing 1 activates Red, 2 - Green, 3 - Blue.
 - Red is the default sokoban pusher. He can push multiple objects, including other characters.
+- The yellow-robed, staff-carrying character can survive adjacent goblin attacks and walk through dragon fire, but cannot push crystals. Monster-filled corridors can be traversed directly with this character.
 - Blue swaps with the first object or character along a clear row or column, even several tiles away. Walls and active force fields block this ability. Account for distant targets before moving.
 - Blue's swaps can preserve pressure-button occupancy and reposition characters without needing a walking route.
 - Blue can swap through metal bars, unlike solid walls. A crystal can replace him in a barred enclosure to let all characters escape.
