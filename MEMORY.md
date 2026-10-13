@@ -2,8 +2,8 @@
 
 - Pressing 1 activates Red, 2 - Green, 3 - Blue, 4 - the yellow-robed character.
 - Red is the default sokoban pusher. He can push multiple objects, including other characters.
-- The yellow-robed Priestess can survive adjacent goblin attacks and walk through dragon fire, but cannot push crystals. She also protects orthogonally adjacent allies from goblins; diagonal adjacency does not protect them. Moving her away can immediately expose an ally to a fatal attack.
-- Green can pull the Priestess behind her to maintain protection while crossing tiles next to goblins.
+- The yellow-robed Priestess can survive adjacent goblin attacks and walk through dragon fire, but cannot push crystals. She also protects orthogonally adjacent allies from goblins and dragon fire; diagonal adjacency does not protect them. Moving her away can immediately expose an ally to a fatal attack.
+- Green can pull the Priestess behind her to maintain protection while crossing tiles next to goblins or along dragon fire lanes.
 - Blue swaps with the first object or character along a clear row or column, even several tiles away. Walls and active force fields block this ability. Account for distant targets before moving.
 - Blue's swaps can preserve pressure-button occupancy and reposition characters without needing a walking route.
 - Blue can swap with goblins. Swapping one next to another makes them kill each other; the Priestess can protect Blue while he sets up a swap from a threatened tile.
