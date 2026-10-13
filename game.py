@@ -15,7 +15,6 @@ ROOT = Path(__file__).resolve().parent
 SCREENCAPTURE = "/usr/sbin/screencapture"
 WINE = "/Applications/CrossOver.app/Contents/SharedSupport/CrossOver/bin/wine"
 AUTOHOTKEY = ROOT / ".tools/AutoHotkey64.exe"
-OUTPUT = Path("board.png")
 
 
 def main():
@@ -57,7 +56,6 @@ def main():
         )
         sleep(0.5)
     capture_board()
-    print(OUTPUT)
 
 
 def capture_board():
@@ -85,7 +83,7 @@ def capture_board():
         )
         with Image.open(raw) as image:
             w, h = image.size
-            image.resize((1400, round(h * 1400 / w))).save(OUTPUT)
+            image.resize((1400, round(h * 1400 / w))).save(Path("board.png"))
 
 
 if __name__ == "__main__":
