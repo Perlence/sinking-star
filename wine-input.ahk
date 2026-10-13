@@ -34,8 +34,8 @@ Main() {
             Sleep(FOCUS_DELAY_MS)
         }
         for key in StrSplit(A_Args[1]) {
-            if DllCall("GetForegroundWindow", "Ptr") != foreground
-                throw Error("Wine foreground window changed during input")
+            if !WinExist("ahk_id " target)
+                throw Error("Game window disappeared during input")
             ; Explicit virtual keys avoid layout-dependent modifiers.
             vk := Ord(StrUpper(key))
             ControlSend("{Blind}{vk" Format("{:02X}", vk) "}", target)
