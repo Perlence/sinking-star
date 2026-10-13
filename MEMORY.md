@@ -26,7 +26,8 @@
 - Goblin combat can eliminate three at once: push one into a tile orthogonally adjacent to two others. Avoid eliminating a pair prematurely and leaving a lone survivor.
 - Dragons attack along the row or column they face. Crystals block their fire and can shield a character pushing from the opposite side.
 - A crystal at the intersection of two dragon fire lanes can block both, allowing safe passage beyond it.
-- Dragon fire can kill goblins; goblins do not provide a reliable shield from the fire.
+- A goblin killed by dragon fire blocks that fire for the rest of the turn.
+- Goblins can hold pressure buttons down. Keep one alive when its button is needed to open an exit route.
 - Green can pull dragons without changing the direction they face. Approach from outside their fire lane.
 - Red can push dragons from the side without changing their facing direction.
 - A goblin immediately in front of a dragon can kill it while simultaneously dying to its fire. Push the dragon sideways into this alignment to eliminate both.
