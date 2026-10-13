@@ -2,6 +2,10 @@
 
 Order of the Sinking Star is a Sokoban-like puzzle video game. See the accumulated game knowledge in MEMORY.md.
 
+## Memory
+
+- Keep `MEMORY.md` notes general and reusable. Record game mechanics and broadly applicable insights, not puzzle-specific solutions or move sequences.
+
 ## Automation
 
 - Use `game.py` for key sequences and screenshots. Chain execution and image reading in one `codemode` call to reduce overhead. Example:
