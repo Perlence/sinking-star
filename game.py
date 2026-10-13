@@ -20,10 +20,10 @@ OUTPUT = Path("board.png")
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "keys", nargs="?", default="", help="Sequence: wasd, c, z, r, 1–9"
+        "keys", nargs="?", default="", help="Sequence: wasd, c, z, r, x, v, f, 1–9"
     )
     args = parser.parse_args()
-    if any(key not in "wasdczr123456789" for key in args.keys):
+    if any(key not in "wasdczrxvf123456789" for key in args.keys):
         parser.error("Unsupported key")
     if args.keys:
         if not AUTOHOTKEY.is_file():
