@@ -1,12 +1,14 @@
 # Game facts
 
-- Pressing 1 activates Red, 2 - Green, 3 - Blue, 4 - the yellow-robed character.
+- Pressing 1 activates Red, 2 - Green, 3 - Blue, 4 - Yellow, 6 - Gray
+- Character 6 transforms an adjacent wall into a movable crystal by walking into it, and transforms a crystal back into a wall. The transformation leaves him on his original tile. Green can pull the crystal away to open a passage.
+- A wall created on a pressure button keeps the button activated.
 - Red is the default sokoban pusher. He can push multiple objects, including other characters.
-- The yellow-robed Priestess can survive adjacent goblin attacks and walk through dragon fire, but cannot push crystals. She also protects orthogonally adjacent allies from goblins and dragon fire; diagonal adjacency does not protect them. Moving her away can immediately expose an ally to a fatal attack.
-- Green can pull the Priestess behind her to maintain protection while crossing tiles next to goblins or along dragon fire lanes.
+- Yellow can survive adjacent goblin attacks and walk through dragon fire, but cannot push crystals. She also protects orthogonally adjacent allies from goblins and dragon fire; diagonal adjacency does not protect them. Moving her away can immediately expose an ally to a fatal attack.
+- Green can pull Yellow behind her to maintain protection while crossing tiles next to goblins or along dragon fire lanes.
 - Blue swaps with the first object or character along a clear row or column, even several tiles away. Walls and active force fields block this ability. Account for distant targets before moving.
 - Blue's swaps can preserve pressure-button occupancy and reposition characters without needing a walking route.
-- Blue can swap with goblins. Swapping one next to another makes them kill each other; the Priestess can protect Blue while he sets up a swap from a threatened tile.
+- Blue can swap with goblins. Swapping one next to another makes them kill each other; Yellow can protect Blue while he sets up a swap from a threatened tile.
 - Blue can swap through metal bars, unlike solid walls. A crystal can replace him in a barred enclosure to let all characters escape.
 - Use another character as an intermediate swap target when a distant crystal would otherwise prevent Blue from stepping onto an empty tile.
 - Green automatically pulls an adjacent object behind her when moving away, including rocks and other characters. She cannot walk into an occupied tile.
