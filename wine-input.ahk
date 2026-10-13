@@ -8,7 +8,7 @@ FOCUS_DELAY_MS := 100
 MESSAGE_TIMEOUT_MS := 1000
 
 ; Run using portable AutoHotkey64.exe in the game's CrossOver bottle.
-; Notify the game of focus without activating it, then restore its state.
+; For background input, notify the game of focus without activating it.
 Main()
 
 Main() {
@@ -26,13 +26,13 @@ Main() {
         if !target
             throw Error("Game window not found")
         foreground := DllCall("GetForegroundWindow", "Ptr")
-        if foreground == target
-            throw Error("Keep another application focused while running game.py")
         SetKeyDelay(-1, KEY_HOLD_MS)
-        ; Set notified first so cleanup is attempted even on a timeout.
-        notified := true
-        SendMessage(0x0007, 0, 0, target, , , , , MESSAGE_TIMEOUT_MS) ; WM_SETFOCUS
-        Sleep(FOCUS_DELAY_MS)
+        if foreground != target {
+            ; Set notified first so cleanup is attempted even on a timeout.
+            notified := true
+            SendMessage(0x0007, 0, 0, target, , , , , MESSAGE_TIMEOUT_MS) ; WM_SETFOCUS
+            Sleep(FOCUS_DELAY_MS)
+        }
         for key in StrSplit(A_Args[1]) {
             if DllCall("GetForegroundWindow", "Ptr") != foreground
                 throw Error("Wine foreground window changed during input")
