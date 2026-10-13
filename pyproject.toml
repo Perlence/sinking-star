@@ -3,4 +3,7 @@ name = "sinking-star"
 version = "0.1.0"
 description = "Automation for Order of the Sinking Star puzzles"
 requires-python = ">=3.11"
-dependencies = ["pillow"]
+dependencies = [
+    "pillow",
+    "pyobjc-framework-quartz>=12.2.2",
+]
