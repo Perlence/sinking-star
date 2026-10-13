@@ -83,8 +83,7 @@ def capture_board():
         )
         with Image.open(raw) as image:
             w, h = image.size
-            board = image.crop((0, int(h * 0.241), w, int(h * 0.789)))
-            board.resize((1400, 890)).save(OUTPUT)
+            image.resize((1400, round(h * 1400 / w))).save(OUTPUT)
 
 
 if __name__ == "__main__":
