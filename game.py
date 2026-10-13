@@ -19,7 +19,9 @@ OUTPUT = Path("board.png")
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("keys", nargs="?", default="", help="Sequence: wasd, c, z, r, 1–9")
+    parser.add_argument(
+        "keys", nargs="?", default="", help="Sequence: wasd, c, z, r, 1–9"
+    )
     args = parser.parse_args()
     if any(key not in "wasdczr123456789" for key in args.keys):
         parser.error("Unsupported key")
@@ -40,8 +42,15 @@ def main():
                 )
             )
         subprocess.run(
-            [WINE, "--bottle=Steam", "--no-update", str(AUTOHOTKEY),
-             "/ErrorStdOut", str(ROOT / "wine-input.ahk"), args.keys],
+            [
+                WINE,
+                "--bottle=Steam",
+                "--no-update",
+                str(AUTOHOTKEY),
+                "/ErrorStdOut",
+                str(ROOT / "wine-input.ahk"),
+                args.keys,
+            ],
             check=True,
         )
     capture_board()
