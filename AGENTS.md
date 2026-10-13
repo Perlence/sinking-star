@@ -1,10 +1,11 @@
 # Order of the Sinking Star bot
 
-Order of the Sinking Star is a Sokoban-like puzzle video game. See the accumulated game knowledge in MEMORY.md.
+Order of the Sinking Star is a Sokoban-like puzzle video game. See the accumulated game knowledge in `MEMORY.md`.
 
 ## Memory
 
 - Keep `MEMORY.md` notes general and reusable. Record game mechanics and broadly applicable insights, not puzzle-specific solutions or move sequences.
+- If you've solved a puzzle and didn't learn any new facts, don't update `MEMORY.md`.
 
 ## Automation
 
