@@ -17,3 +17,4 @@
 - Hedge walls block Blue's swaps, unlike metal bars.
 - A force field reactivating on a character disables that character. Undo restores the situation.
 - Restarting with R can be undone with Z.
+- Goblins kill a character on an orthogonally adjacent tile. Diagonally adjacent tiles are safe, so route around their occupied tiles and four neighboring tiles.
