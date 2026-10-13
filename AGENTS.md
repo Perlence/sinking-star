@@ -14,6 +14,7 @@ Order of the Sinking Star is a Sokoban-like puzzle video game. See the accumulat
   if (r.exit_code !== 0) throw new Error(r.output);
   image(await tools.read({path: "board.png"}));
   ```
+- Run `uv run game.py` without keys for a screenshot only.
 - Check screenshots after meaningful batches. A successful script exit does not prove every intended move succeeded.
 
 ## Controls

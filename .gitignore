@@ -1,6 +1,9 @@
 # Generated screenshots
 board.png
 
+# Portable AutoHotkey runtime
+.tools/
+
 # Python caches and environments
 __pycache__/
 *.py[cod]
