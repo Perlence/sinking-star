@@ -18,3 +18,5 @@
 - A force field reactivating on a character disables that character. Undo restores the situation.
 - Restarting with R can be undone with Z.
 - Goblins kill a character on an orthogonally adjacent tile. Diagonally adjacent tiles are safe, so route around their occupied tiles and four neighboring tiles.
+- Goblins also kill each other when orthogonally adjacent. Push them with a crystal between the pusher and goblin to stay outside their attack range; pushing them against a wall does not crush them.
+- Some gates stay active while monsters remain. Bring goblins together to eliminate them and open these gates.
