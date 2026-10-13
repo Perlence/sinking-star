@@ -10,4 +10,6 @@
 - Unselected characters look gray; color alone does not identify which characters are present.
 - The flower-shaped tiles were pressure buttons; the circular tiles were exits.
 - Crystals can hold buttons down.
+- Reactivating a force field destroys crystals on its tile. Move characters clear first, destroy blocking crystals, then deactivate the field again to reopen the passage.
+- Hedge walls block Blue's swaps, unlike metal bars.
 - A force field reactivating on a character disables that character. Undo restores the situation.
