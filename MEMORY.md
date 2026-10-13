@@ -20,3 +20,4 @@
 - Goblins kill a character on an orthogonally adjacent tile. Diagonally adjacent tiles are safe, so route around their occupied tiles and four neighboring tiles.
 - Goblins also kill each other when orthogonally adjacent. Push them with a crystal between the pusher and goblin to stay outside their attack range; pushing them against a wall does not crush them.
 - Some gates stay active while monsters remain. Bring goblins together to eliminate them and open these gates.
+- Goblin combat can eliminate three at once: push one into a tile orthogonally adjacent to two others. Avoid eliminating a pair prematurely and leaving a lone survivor.
