@@ -20,12 +20,13 @@ OUTPUT = Path("board.png")
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "keys", nargs="?", default="", help="Sequence: wasd, c, z, r, x, v, f, 1–9"
+        "keys", nargs="*", help="Sequences joined in order: wasd, c, z, r, x, v, f, 1–9"
     )
     args = parser.parse_args()
-    if any(key not in "wasdczrxvf123456789" for key in args.keys):
+    keys = "".join(args.keys)
+    if any(key not in "wasdczrxvf123456789" for key in keys):
         parser.error("Unsupported key")
-    if args.keys:
+    if keys:
         if not AUTOHOTKEY.is_file():
             parser.error(
                 cleandoc(
@@ -49,7 +50,7 @@ def main():
                 str(AUTOHOTKEY),
                 "/ErrorStdOut",
                 str(ROOT / "wine-input.ahk"),
-                args.keys,
+                keys,
             ],
             check=True,
         )
