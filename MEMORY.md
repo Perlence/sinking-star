@@ -24,3 +24,5 @@
 - Dragons attack along the row or column they face. Crystals block their fire and can shield a character pushing from the opposite side.
 - A crystal at the intersection of two dragon fire lanes can block both, allowing safe passage beyond it.
 - Dragon fire can kill goblins; goblins do not provide a reliable shield from the fire.
+- Green can pull dragons without changing the direction they face. Approach from outside their fire lane.
+- Opposing dragons can kill each other simultaneously. Keep a crystal between them while arranging them, then pull it out of their shared fire lane.
