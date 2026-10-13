@@ -16,7 +16,7 @@ RAW = Path("/tmp/sinking-star-window.png")
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("keys", nargs="?", default="", help="Sequence: wasd, c, z, r, 1–9")
-    parser.add_argument("--output", default="sinking-star-board.png")
+    parser.add_argument("--output", default="board.png")
     args = parser.parse_args()
     if any(key not in "wasdczr123456789" for key in args.keys):
         parser.error("Unsupported key")
