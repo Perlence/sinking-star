@@ -1,5 +1,6 @@
 # Game facts
 
+- Pressing 1 activates Red, 2 - Green, 3 - Blue.
 - Red is the default sokoban pusher. He can push multiple objects, including other characters.
 - Blue swaps with the first object or character along a clear row or column, even several tiles away. Walls and active force fields block this ability. Account for distant targets before moving.
 - Blue's swaps can preserve pressure-button occupancy and reposition characters without needing a walking route.
