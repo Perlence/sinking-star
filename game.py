@@ -6,6 +6,7 @@ import subprocess
 from inspect import cleandoc
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from time import sleep
 
 import Quartz
 from PIL import Image
@@ -54,6 +55,7 @@ def main():
             ],
             check=True,
         )
+        sleep(0.5)
     capture_board()
     print(OUTPUT)
 
