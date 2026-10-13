@@ -1,0 +1,7 @@
+# Generated screenshots
+sinking-star-board.png
+
+# Python caches and environments
+__pycache__/
+*.py[cod]
+.venv/
