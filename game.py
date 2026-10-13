@@ -1,8 +1,4 @@
-#!/usr/bin/env -S uv run --script
-# /// script
-# requires-python = ">=3.11"
-# dependencies = ["pillow"]
-# ///
+#!/usr/bin/env -S uv run
 """Focus the game, send keys, then capture the board."""
 
 import argparse
