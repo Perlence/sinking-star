@@ -1,22 +1,22 @@
 # Game facts
 
-- Pressing 1 activates Red, 2 - Green, 3 - Blue, 4 - Yellow, 6 - Gray
-- Red is the default sokoban pusher. He can push multiple objects, including other characters.
-- An organism created on a pressure button keeps the button activated.
-- Yellow can survive adjacent goblin attacks and walk through dragon fire, but cannot push crystals. She also protects orthogonally adjacent allies from goblins and dragon fire; diagonal adjacency does not protect them. Moving her away can immediately expose an ally to a fatal attack.
-- Green can pull Yellow behind her to maintain protection while crossing tiles next to goblins or along dragon fire lanes.
+- Pressing 1 activates Red, 2 - Green, 3 - Blue, 4 - Yellow, 5 - Pink, 6 - Gray
+- Red bulky guy is the default sokoban pusher. He can push multiple objects, including other characters.
+- Yellow priestess can survive adjacent goblin attacks and walk through dragon fire, but cannot push crystals. She also protects orthogonally adjacent allies from goblins and dragon fire; diagonal adjacency does not protect them. Moving her away can immediately expose an ally to a fatal attack.
+- Green thief can pull Yellow behind her to maintain protection while crossing tiles next to goblins or along dragon fire lanes.
 - Green automatically pulls an adjacent object behind her when moving away, including rocks and other characters. She cannot walk into an occupied tile.
-- Blue swaps with the first object or character along a clear row or column, even several tiles away. Walls and active force fields block this ability. Account for distant targets before moving.
+- Blue wizard swaps with the first object or character along a clear row or column, even several tiles away. Walls and active force fields block this ability. Account for distant targets before moving.
 - Blue's swaps can preserve pressure-button occupancy and reposition characters without needing a walking route.
 - Blue can swap with goblins. Swapping one next to another makes them kill each other; Yellow can protect Blue while he sets up a swap from a threatened tile.
 - Blue can swap through metal bars, unlike solid walls. A crystal can replace him in a barred enclosure to let all characters escape.
 - Use another character as an intermediate swap target when a distant crystal would otherwise prevent Blue from stepping onto an empty tile.
 - Swapping Green with Blue does not trigger her pull. This can relocate her without disturbing a crystal behind her on a button.
-- The pink-clad bard makes goblins within two tiles in both axes mirror her successful moves. Her influence passes through walls, but goblins still collide with walls. A blocked bard move does not move them.
+- Pink bard makes goblins within two tiles in both axes mirror her successful moves. Her influence passes through walls, but goblins still collide with walls. A blocked bard move does not move them.
 - Goblins newly entering the bard's aura start copying on her next move. The aura does not prevent them from killing her.
 - Use a wall to hold a goblin in place while the bard leaves aura range, then reenter from another side to change their relative positions.
 - Gray transforms an adjacent living organism (characters, monsters, plants) into a crystal by walking into it, and transforms a crystal back into an organism. The transformation leaves him on his original tile.
 - Crystallized monsters retain their identity: Red can transport a crystallized dragon, and Gray can restore it with its original fire direction.
+- An organism created on a pressure button keeps the button activated.
 - Push a chain of two crystals when a single-crystal push would leave Red adjacent to a goblin. The extra crystal keeps Red one tile farther away.
 - Unselected characters look grayish; color alone does not identify which characters are present.
 - The flower-shaped tiles were pressure buttons; the circular tiles were exits.
