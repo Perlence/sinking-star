@@ -22,6 +22,7 @@
 - Exits do not require clearing every crystal; leave irrelevant crystals in place.
 - Reactivating a force field destroys crystals on its tile. Move characters clear first, destroy blocking crystals, then deactivate the field again to reopen the passage.
 - Hedge walls block Blue's swaps, unlike metal bars.
+- Blue cannot teleport plants.
 - A force field reactivating on a character disables that character. Undo restores the situation.
 - Restarting with R can be undone with Z.
 - Goblins kill a character on an orthogonally adjacent tile. Diagonally adjacent tiles are safe, so route around their occupied tiles and four neighboring tiles.
