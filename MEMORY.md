@@ -13,6 +13,8 @@
 - Use another character as an intermediate swap target when a distant crystal would otherwise prevent Blue from stepping onto an empty tile.
 - Swapping Green with Blue does not trigger her pull. This can relocate her without disturbing a crystal behind her on a button.
 - Gray transforms an adjacent living organism (characters, monsters, plants) into a crystal by walking into it, and transforms a crystal back into an organism. The transformation leaves him on his original tile.
+- Crystallized monsters retain their identity: Red can transport a crystallized dragon, and Gray can restore it with its original fire direction.
+- Push a chain of two crystals when a single-crystal push would leave Red adjacent to a goblin. The extra crystal keeps Red one tile farther away.
 - Unselected characters look grayish; color alone does not identify which characters are present.
 - The flower-shaped tiles were pressure buttons; the circular tiles were exits.
 - Crystals can hold buttons down.
