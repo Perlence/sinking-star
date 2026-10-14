@@ -33,8 +33,9 @@
 
 ### Pink
 
-- Pink bard makes goblins and crystals within two tiles in both axes mirror her successful moves. Her influence passes through walls, but affected objects still collide with walls. A blocked Pink move does not move them.
-- Adjacent crystals under the Pink's influence can move together, each entering the tile the next crystal vacates.
+- Pink bard makes characters, goblins, and crystals within two tiles in both axes mirror her successful moves. Her influence passes through walls, but affected objects still collide with walls. A blocked Pink move does not move them.
+- All living objects and crystals under Pink's influence can move together, each entering a tile another vacates. Pink can also enter those vacated tiles on the same move.
+- Red can push Pink without triggering her mirroring ability. Push her out of range to leave controlled objects in place.
 - Goblins newly entering the Pink's aura start copying on her next move. The aura does not prevent them from killing her.
 
 ### Gray
