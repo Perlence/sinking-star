@@ -12,6 +12,9 @@
 - Blue can swap through metal bars, unlike solid walls. A crystal can replace him in a barred enclosure to let all characters escape.
 - Use another character as an intermediate swap target when a distant crystal would otherwise prevent Blue from stepping onto an empty tile.
 - Swapping Green with Blue does not trigger her pull. This can relocate her without disturbing a crystal behind her on a button.
+- The pink-clad bard makes goblins within two tiles in both axes mirror her successful moves. Her influence passes through walls, but goblins still collide with walls. A blocked bard move does not move them.
+- Goblins newly entering the bard's aura start copying on her next move. The aura does not prevent them from killing her.
+- Use a wall to hold a goblin in place while the bard leaves aura range, then reenter from another side to change their relative positions.
 - Gray transforms an adjacent living organism (characters, monsters, plants) into a crystal by walking into it, and transforms a crystal back into an organism. The transformation leaves him on his original tile.
 - Crystallized monsters retain their identity: Red can transport a crystallized dragon, and Gray can restore it with its original fire direction.
 - Push a chain of two crystals when a single-crystal push would leave Red adjacent to a goblin. The extra crystal keeps Red one tile farther away.
