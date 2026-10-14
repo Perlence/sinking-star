@@ -33,9 +33,9 @@
 
 ### Pink
 
-- Pink bard makes goblins and crystals within two tiles in both axes mirror her successful moves. Her influence passes through walls, but affected objects still collide with walls. A blocked bard move does not move them.
-- Adjacent crystals under the bard's influence can move together, each entering the tile the next crystal vacates.
-- Goblins newly entering the bard's aura start copying on her next move. The aura does not prevent them from killing her.
+- Pink bard makes goblins and crystals within two tiles in both axes mirror her successful moves. Her influence passes through walls, but affected objects still collide with walls. A blocked Pink move does not move them.
+- Adjacent crystals under the Pink's influence can move together, each entering the tile the next crystal vacates.
+- Goblins newly entering the Pink's aura start copying on her next move. The aura does not prevent them from killing her.
 
 ### Gray
 
@@ -43,20 +43,21 @@
 
 ## Board mechanics
 
-- Crystallized monsters retain their identity: Red can transport a crystallized dragon, and Gray can restore it with its original fire direction.
 - Crystals can hold buttons down.
-- An organism created on a pressure button keeps the button activated.
 - Goblins can hold pressure buttons down. Keep one alive when its button is needed to open an exit route.
-- Some force fields require multiple buttons to be occupied simultaneously. Blue can swap characters between those buttons without interrupting their occupancy.
+- Some force fields require multiple buttons to be pressed simultaneously.
 - Reactivating a force field destroys crystals on its tile. Move characters clear first, destroy blocking crystals, then deactivate the field again to reopen the passage.
 - A force field reactivating on a character disables that character. Undo restores the situation.
-- Purple gates with fangs stay active while monsters remain. Bring goblins together to eliminate them and open these gates.
+- Purple gates with fangs stay active while monsters remain.
 - Exits do not require clearing every crystal; leave irrelevant crystals in place.
+- Crystallized monsters retain their identity: Red can transport a crystallized dragon, and Gray can restore it with its original fire direction.
+- An organism created on a pressure button keeps the button activated.
 
 ## Monsters and combat
 
 - Goblins kill a character on an orthogonally adjacent tile. Diagonally adjacent tiles are safe, so route around their occupied tiles and four neighboring tiles.
 - Goblins also kill each other when orthogonally adjacent. Push them with a crystal between the pusher and goblin to stay outside their attack range; pushing them against a wall does not crush them.
+- Goblin combat can eliminate three at once: push one into a tile orthogonally adjacent to two others. Avoid eliminating a pair prematurely and leaving a lone survivor.
 - Dragons attack along the row or column they face. Crystals block their fire and can shield a character pushing from the opposite side.
 - A goblin killed by dragon fire blocks that fire for the rest of the turn.
 - A goblin immediately in front of a dragon can kill it while simultaneously dying to its fire. Push the dragon sideways into this alignment to eliminate both.
@@ -68,7 +69,6 @@
 - Blue's swaps can preserve pressure-button occupancy and reposition characters without needing a walking route.
 - Use another character as an intermediate swap target when a distant crystal would otherwise prevent Blue from stepping onto an empty tile.
 - Swapping Green with Blue does not trigger her pull. This can relocate her without disturbing a crystal behind her on a button.
-- Use a wall to hold a goblin in place while the bard leaves aura range, then reenter from another side to change their relative positions.
+- Use a wall to hold a goblin in place while Pink leaves aura range, then reenter from another side to change their relative positions.
 - Push a chain of two crystals when a single-crystal push would leave Red adjacent to a goblin. The extra crystal keeps Red one tile farther away.
-- Goblin combat can eliminate three at once: push one into a tile orthogonally adjacent to two others. Avoid eliminating a pair prematurely and leaving a lone survivor.
 - A crystal at the intersection of two dragon fire lanes can block both, allowing safe passage beyond it.
