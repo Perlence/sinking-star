@@ -50,10 +50,11 @@
 - Tall foreground walls can hide walkable tiles and exits. Test uncertain tiles rather than treating the rendered wall top as the grid boundary.
 - Crystals can hold buttons down.
 - Goblins can hold pressure buttons down. Keep one alive when its button is needed to open an exit route.
+- Buttons and gates are color-coded: buttons control gates of the matching color. Distinguish close shades rather than treating similar-looking colors as one group.
 - Some force fields require multiple buttons to be pressed simultaneously.
-- Reactivating a force field destroys crystals on its tile. Move characters clear first, destroy blocking crystals, then deactivate the field again to reopen the passage.
-- A force field reactivating on a character disables that character. Undo restores the situation.
-- Reactivating a force field on a goblin removes the goblin.
+- Gates close in different directions. The square frame remaining on an open gate marks its starting face; it closes perpendicular to that face, into the tile.
+- Horizontally closing gates push crystals, characters, and monsters in their closing direction. They can push chains, including a crystal into a character or goblin.
+- Top-to-bottom force fields destroy crystals and goblins on their tile and disable characters when reactivated. Undo restores the situation. Move characters clear before using these fields to remove blocking objects.
 - Do not assume purple gates require clearing all monsters. They can be open with a living goblin elsewhere on the board.
 - Exits do not require clearing every crystal; leave irrelevant crystals in place.
 - Crystallized monsters retain their identity: Warrior can transport a crystallized dragon, and Druid can restore it with its original fire direction.
@@ -78,3 +79,4 @@
 - Use a wall to hold a goblin in place while Bard leaves aura range, then reenter from another side to change their relative positions.
 - Push a chain of two crystals when a single-crystal push would leave Warrior adjacent to a goblin. The extra crystal keeps Warrior one tile farther away.
 - A crystal at the intersection of two dragon fire lanes can block both, allowing safe passage beyond it.
+- Directional gates supply pushes that characters cannot perform themselves. Alternate switches to move objects along a series of gates, or use a gate to push a crystal onto a boundary-row button.
