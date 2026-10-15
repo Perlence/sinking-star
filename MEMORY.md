@@ -21,7 +21,7 @@
 
 ### Wizard (blue)
 
-- Wizard wizard swaps with the first object or character along a clear row or column, even several tiles away. Walls and active force fields block this ability. Account for distant targets before moving.
+- Wizard wizard swaps with the first object or character along a clear row or column, even several tiles away. Walls and closed gates block this ability. Account for distant targets before moving.
 - Wizard can swap with goblins. Swapping one next to another makes them kill each other; Priestess can protect Wizard while he sets up a swap from a threatened tile.
 - Wizard can swap through metal bars, unlike solid walls. A crystal can replace him in a barred enclosure to let all characters escape.
 - Hedge walls block Wizard's swaps, unlike metal bars.
@@ -51,10 +51,10 @@
 - Crystals can hold buttons down.
 - Goblins can hold pressure buttons down. Keep one alive when its button is needed to open an exit route.
 - Buttons and gates are color-coded: buttons control gates of the matching color. Distinguish close shades rather than treating similar-looking colors as one group.
-- Some force fields require multiple buttons to be pressed simultaneously.
+- Some gates require multiple buttons to be pressed simultaneously.
 - Gates close in different directions. The square frame remaining on an open gate marks its starting face; it closes perpendicular to that face, into the tile.
 - Horizontally closing gates push crystals, characters, and monsters in their closing direction. They can push chains, including a crystal into a character or goblin.
-- Top-to-bottom force fields destroy crystals and goblins on their tile and disable characters when reactivated. Undo restores the situation. Move characters clear before using these fields to remove blocking objects.
+- Top-to-bottom gates destroy crystals and goblins on their tile and disable characters when closed. Undo restores the situation. Move characters clear before using these gates to remove blocking objects.
 - Do not assume purple gates require clearing all monsters. They can be open with a living goblin elsewhere on the board.
 - Exits do not require clearing every crystal; leave irrelevant crystals in place.
 - Crystallized monsters retain their identity: Warrior can transport a crystallized dragon, and Druid can restore it with its original fire direction.
