@@ -2,6 +2,11 @@
 
 Order of the Sinking Star is a Sokoban-like puzzle video game. See the accumulated game knowledge in `MEMORY.md`.
 
+## General rules
+
+- Do not google the solution, you lazy ass.
+- Do not read the game files.
+
 ## Memory
 
 - Keep `MEMORY.md` notes general and reusable. Record game mechanics and broadly applicable insights, not puzzle-specific solutions or move sequences.
