@@ -47,6 +47,7 @@
 
 ## Board mechanics
 
+- Tall foreground walls can hide walkable tiles and exits. Test uncertain tiles rather than treating the rendered wall top as the grid boundary.
 - Crystals can hold buttons down.
 - Goblins can hold pressure buttons down. Keep one alive when its button is needed to open an exit route.
 - Some force fields require multiple buttons to be pressed simultaneously.
