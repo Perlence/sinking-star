@@ -69,10 +69,10 @@
 - A mirror's nonreflective side blocks the line of sight to mirrors beyond it.
 - Plain mirrors do not initiate teleportation themselves, but their reflective sides can redirect a rainbow mirror's projected path. The total path length after the rainbow mirror equals the character's distance from it; count every segment through subsequent mirrors.
 - Solid walls block the reflected path from a mirror to its destination. Increasing the teleport distance does not let a character jump past them.
-- With multiple valid mirror images, X replaces the character with a real copy at each reflected destination. Existing copies can split again, so two mirrors can create more than two copies over successive uses.
+- With multiple valid mirror images, X replaces a character or crystal with a real copy at each reflected destination. Existing copies can split again, so two mirrors can create more than two copies over successive uses.
 - Mirror-created copies share movement inputs, but a blocked copy stays still while others move. Use island edges or walls to adjust their relative positions and fill separate exits.
 - X also teleports existing copies with valid mirror images. Keep a copy out of mirror alignment when teleporting another.
-- X can teleport an adjacent crystal or adjacent crystal image through a mirror while the character stays put. Check which object is projected before activating it.
+- X can teleport an adjacent crystal or retrieve a distant crystal through its adjacent mirror image. It also teleports the character if they have a valid projection; a crystal blocking their sightline can keep them in place.
 - Mirrors can be pushed without changing their orientation, including across stepping-stones, to reposition teleport routes. Leave room to stand behind a mirror when it must be pushed back later.
 - Boulders and crystals pushed into water become walkable stepping-stones. A crystal teleported into water does too, creating a landing tile for a later character teleport. Other objects, including mirrors, can be pushed across them.
 
@@ -88,6 +88,7 @@
 
 ## Reusable tactics
 
+- Two mirrors can supply unlimited crystals: split a crystal into two safe destinations, move one copy out of mirror alignment, then retrieve the other through its adjacent image and split it again. Sink the spare copies to build a bridge.
 - A sunk crystal need not connect to shore. Teleport onto it as an isolated staging point, then have another character reposition the mirror to enable a longer second teleport. Plan the landing and departure mirror positions separately.
 - Thief thief can pull Priestess behind her to maintain protection while crossing tiles next to goblins or along dragon fire lanes.
 - Wizard's swaps can preserve pressure-button occupancy and reposition characters without needing a walking route.
