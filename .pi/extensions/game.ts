@@ -1,7 +1,9 @@
+import { spawn, type ChildProcessWithoutNullStreams } from "node:child_process";
 import { existsSync } from "node:fs";
 import { createRequire } from "node:module";
 import { join } from "node:path";
-import { setTimeout } from "node:timers/promises";
+import { createInterface } from "node:readline";
+import { setTimeout as sleep } from "node:timers/promises";
 import { Type } from "@earendil-works/pi-ai";
 import { defineTool, type ExtensionAPI } from "@earendil-works/pi-coding-agent";
 
@@ -16,10 +18,14 @@ const { Transformer, ResizeFilterType, ResizeFit } = require(
 ) as typeof import("@napi-rs/image");
 
 const WINE = "/Applications/CrossOver.app/Contents/SharedSupport/CrossOver/bin/wine";
+const REQUEST_TIMEOUT_MS = 20_000;
 const MAX_DIMENSION = 2000;
 const WEBP_QUALITY = 90;
 
 export default function (pi: ExtensionAPI) {
+  const inputHelper = new GameInput();
+  pi.on("session_shutdown", () => inputHelper.stop());
+
   pi.registerTool(defineTool({
     name: "game",
     label: "Game",
@@ -35,33 +41,8 @@ export default function (pi: ExtensionAPI) {
       }
 
       if (input) {
-        const autoHotkey = join(ctx.cwd, ".tools/AutoHotkey64.exe");
-        if (!existsSync(autoHotkey)) {
-          throw new Error(`Missing .tools/AutoHotkey64.exe. Install portable AutoHotkey into the ignored .tools directory:
-
-mkdir -p .tools
-gh release download v2.0.30 --repo AutoHotkey/AutoHotkey --pattern AutoHotkey_2.0.30.zip --dir .tools
-unzip -jo .tools/AutoHotkey_2.0.30.zip AutoHotkey64.exe -d .tools
-rm .tools/AutoHotkey_2.0.30.zip`);
-        }
-
-        const result = await pi.exec(WINE, [
-          "--bottle=Steam",
-          "--no-update",
-          autoHotkey,
-          "/ErrorStdOut",
-          join(ctx.cwd, "wine-input.ahk"),
-          input,
-        ], { cwd: ctx.cwd, signal, timeout: 20_000 });
-
-        if (result.code !== 0) {
-          return {
-            content: [{ type: "text", text: result.stdout + result.stderr }],
-            details: undefined,
-            isError: true,
-          };
-        }
-        await setTimeout(500, undefined, { signal });
+        await inputHelper.send(ctx.cwd, input, signal);
+        await sleep(500, undefined, { signal });
       }
 
       signal?.throwIfAborted();
@@ -95,4 +76,84 @@ rm .tools/AutoHotkey_2.0.30.zip`);
       };
     },
   }));
+}
+
+// Never replay a failed request: some keys may already have reached the game.
+class GameInput {
+  private helper?: ChildProcessWithoutNullStreams;
+  private pending?: (error?: Error) => void;
+
+  async send(cwd: string, keys: string, signal?: AbortSignal) {
+    signal?.throwIfAborted();
+    if (this.pending) throw new Error("Another game input request is still running.");
+    if (!this.helper) this.start(cwd);
+    await new Promise<void>((resolve, reject) => {
+      this.pending = (error?: Error) => {
+        clearTimeout(timeout);
+        signal?.removeEventListener("abort", abort);
+        this.pending = undefined;
+        if (error) reject(error);
+        else resolve();
+      };
+      const abort = () => {
+        this.stop(new Error("Game input canceled; some keys may already have been sent."));
+      };
+      const timeout = setTimeout(() => {
+        this.stop(new Error("Game input timed out; some keys may already have been sent."));
+      }, REQUEST_TIMEOUT_MS);
+      signal?.addEventListener("abort", abort, { once: true });
+      if (signal?.aborted) abort();
+      else this.helper!.stdin.write(`${keys}\n`);
+    });
+  }
+
+  stop(error = new Error("Game input helper stopped.")) {
+    const helper = this.helper;
+    this.helper = undefined;
+    if (!helper) return;
+    if (this.pending) {
+      // EOF would let AHK finish the entire batch before exiting.
+      helper.kill("SIGKILL");
+      this.pending(error);
+    }
+    helper.stdin.end();
+    // EOF normally exits an idle helper; bound shutdown if it hangs.
+    const timer = setTimeout(() => helper.kill("SIGKILL"), 2_000);
+    timer.unref();
+    helper.once("exit", () => clearTimeout(timer));
+  }
+
+  private start(cwd: string) {
+    const autoHotkey = join(cwd, ".tools/AutoHotkey64.exe");
+    if (!existsSync(autoHotkey)) {
+      throw new Error("Missing .tools/AutoHotkey64.exe. Install portable AutoHotkey in .tools.");
+    }
+    const helper = spawn(WINE, [
+      "--bottle=Steam", "--no-update", autoHotkey, "/ErrorStdOut",
+      join(cwd, "wine-input.ahk"),
+    ], { cwd, stdio: "pipe" });
+    this.helper = helper;
+    let stderr = "";
+    const lines = createInterface({ input: helper.stdout });
+    const fail = (error: Error) => {
+      if (this.helper === helper) this.stop(error);
+    };
+    lines.on("line", line => {
+      if (this.helper !== helper) return;
+      if (!this.pending || (line !== "ok" && !line.startsWith("error "))) {
+        fail(new Error(`Unexpected game input reply: ${line}`));
+      } else {
+        this.pending(line === "ok" ? undefined : new Error(line.slice(6)));
+      }
+    });
+    helper.stderr.on("data", data => {
+      stderr = (stderr + data.toString()).slice(-4_000);
+    });
+    helper.on("error", fail);
+    helper.stdin.on("error", fail);
+    helper.on("exit", (code, signal) => {
+      lines.close();
+      fail(new Error(`Game input helper exited (${signal ?? code}). ${stderr}`));
+    });
+  }
 }
