@@ -67,6 +67,7 @@
 - Angled mirrors redirect teleportation by 90 degrees while preserving tile distance from the mirror. Moving farther from a mirror before teleporting can reach a more distant island.
 - Mirrors reflect only from their facing sides. A red projection marks a blocked destination. A non-red projection can still be over water; teleporting there drowns the character.
 - A mirror blocks the line of sight to another mirror, even when approached from its nonreflective side.
+- Solid walls block the reflected path from a mirror to its destination. Increasing the teleport distance does not let a character jump past them.
 - With multiple valid mirror images, X replaces the character with a real copy at each reflected destination. Existing copies can split again, so two mirrors can create more than two copies over successive uses.
 - Mirror-created copies share movement inputs, but a blocked copy stays still while others move. Use island edges or walls to adjust their relative positions and fill separate exits.
 - X also teleports existing copies with valid mirror images. Keep a copy out of mirror alignment when teleporting another.
