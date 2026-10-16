@@ -2,7 +2,7 @@
 
 ## Controls and interface
 
-- Pressing 1 activates Warrior, 2 - Thief, 3 - Wizard, 4 - Priestess, 5 - Bard, 6 - Druid
+- Pressing 1 activates Warrior, 2 - Thief, 3 - Wizard, 4 - Priestess, 5 - Bard, 6 - Druid, 9 - Merchant
 - Restarting with R can be undone with Z.
 - Unselected characters look grayish; color alone does not identify which characters are present.
 - The flower-shaped tiles were pressure buttons; the circular tiles were exits.
@@ -44,6 +44,10 @@
 ### Druid (gray)
 
 - Druid transforms an adjacent living organism (characters, monsters, plants) into a crystal by walking into it, and transforms a crystal back into an organism. The transformation leaves him on his original tile.
+
+### Merchant (orange)
+
+- A basic Sokoban pusher. Cannot push more than 1 object.
 
 ## Board mechanics
 
