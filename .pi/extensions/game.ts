@@ -17,12 +17,13 @@ export default function (pi: ExtensionAPI) {
   pi.registerTool(defineTool({
     name: "game",
     label: "Game",
-    description: "Send optional game keys and return a screenshot; omit input for a screenshot only.",
+    description: "Send optional game keys and return a screenshot; whitespace is ignored. Omit input for a screenshot only.",
     parameters: Type.Object({
       input: Type.Optional(Type.String()),
     }),
 
     async execute(_id, { input = "" }, signal, _onUpdate, ctx) {
+      input = input.replace(/\s/g, "");
       if (/[^wasdczrxvf123456789]/.test(input)) {
         throw new Error("Unsupported key. Use only wasdczrxvf123456789.");
       }
