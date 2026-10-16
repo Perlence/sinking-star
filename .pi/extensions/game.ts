@@ -1,5 +1,4 @@
 import { existsSync } from "node:fs";
-import { writeFile } from "node:fs/promises";
 import { createRequire } from "node:module";
 import { join } from "node:path";
 import { setTimeout } from "node:timers/promises";
@@ -7,11 +6,18 @@ import { Type } from "@earendil-works/pi-ai";
 import { defineTool, type ExtensionAPI } from "@earendil-works/pi-coding-agent";
 
 // Pi's compiled Bun runtime needs the native binding's explicit filename.
+const require = createRequire(import.meta.url);
 const target = `${process.platform}-${process.arch}`;
-const { Window } = createRequire(import.meta.url)(
+const { Window } = require(
   `node-screenshots-${target}/node-screenshots.${target}.node`,
 ) as typeof import("node-screenshots");
+const { Transformer, ResizeFilterType, ResizeFit } = require(
+  `@napi-rs/image-${target}/image.${target}.node`,
+) as typeof import("@napi-rs/image");
+
 const WINE = "/Applications/CrossOver.app/Contents/SharedSupport/CrossOver/bin/wine";
+const MAX_DIMENSION = 2000;
+const WEBP_QUALITY = 90;
 
 export default function (pi: ExtensionAPI) {
   pi.registerTool(defineTool({
@@ -67,15 +73,22 @@ rm .tools/AutoHotkey_2.0.30.zip`);
         throw new Error(`Expected one game window, found ${windows.length}. Check that the game is running and Screen Recording permission is enabled.`);
       }
 
-      const screenshot = await (await windows[0].captureImage()).toPng();
-      await writeFile(join(ctx.cwd, "board.png"), screenshot);
+      const image = await windows[0].captureImage();
+      const limits = ctx.model?.inputLimits?.images?.resize;
+      const width = Math.min(image.width, limits?.maxWidth ?? MAX_DIMENSION);
+      const height = Math.min(image.height, limits?.maxHeight ?? MAX_DIMENSION);
+      const screenshot = await Transformer.fromRgbaPixels(
+        await image.toRaw(), image.width, image.height,
+      )
+        .resize(width, height, ResizeFilterType.Lanczos3, ResizeFit.Inside)
+        .webp(WEBP_QUALITY);
       return {
         content: [
           { type: "text", text: "" },
           {
             type: "image",
             data: screenshot.toString("base64"),
-            mimeType: "image/png",
+            mimeType: "image/webp",
           },
         ],
         details: undefined,
