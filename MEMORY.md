@@ -72,7 +72,7 @@
 - X also teleports existing copies with valid mirror images. Keep a copy out of mirror alignment when teleporting another.
 - X can teleport an adjacent crystal or adjacent crystal image through a mirror while the character stays put. Check which object is projected before activating it.
 - Mirrors can be pushed without changing their orientation, including across stepping-stones, to reposition teleport routes. Leave room to stand behind a mirror when it must be pushed back later.
-- Boulders and crystals pushed into water become walkable stepping-stones. Other objects, including mirrors, can be pushed across them.
+- Boulders and crystals pushed into water become walkable stepping-stones. A crystal teleported into water does too, creating a landing tile for a later character teleport. Other objects, including mirrors, can be pushed across them.
 
 ## Monsters and combat
 
