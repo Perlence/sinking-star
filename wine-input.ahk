@@ -4,7 +4,6 @@
 
 KEY_HOLD_MS := 50
 KEY_GAP_MS := 350
-FOCUS_DELAY_MS := 100
 MESSAGE_TIMEOUT_MS := 1000
 
 ; Run using portable AutoHotkey64.exe in the game's CrossOver bottle.
@@ -12,7 +11,7 @@ MESSAGE_TIMEOUT_MS := 1000
 Main()
 
 Main() {
-    global KEY_HOLD_MS, KEY_GAP_MS, FOCUS_DELAY_MS, MESSAGE_TIMEOUT_MS
+    global KEY_HOLD_MS, KEY_GAP_MS, MESSAGE_TIMEOUT_MS
 
     if A_Args.Length != 1 || !RegExMatch(A_Args[1], "^[wasdczrxvf123456789]+$") {
         FileAppend("Use the game tool to run this helper`n", "**")
@@ -31,7 +30,6 @@ Main() {
             ; Set notified first so cleanup is attempted even on a timeout.
             notified := true
             SendMessage(0x0007, 0, 0, target, , , , , MESSAGE_TIMEOUT_MS) ; WM_SETFOCUS
-            Sleep(FOCUS_DELAY_MS)
         }
         for key in StrSplit(A_Args[1]) {
             if !WinExist("ahk_id " target)
