@@ -59,6 +59,8 @@
 - Exits do not require clearing every crystal; leave irrelevant crystals in place.
 - Crystallized monsters retain their identity: Warrior can transport a crystallized dragon, and Druid can restore it with its original fire direction.
 - An organism created on a pressure button keeps the button activated.
+- Align with a mirror's row or column to reveal a ghost marking the teleport destination. Press X to teleport across water to that tile; facing the mirror is not required.
+- Angled mirrors redirect teleportation by 90 degrees while preserving tile distance from the mirror. Moving farther from a mirror before teleporting can reach a more distant island.
 
 ## Monsters and combat
 
