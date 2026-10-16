@@ -65,6 +65,8 @@
 - An organism created on a pressure button keeps the button activated.
 - Align with a mirror's row or column to reveal a ghost marking the teleport destination. Press X to teleport across water to that tile; facing the mirror is not required.
 - Angled mirrors redirect teleportation by 90 degrees while preserving tile distance from the mirror. Moving farther from a mirror before teleporting can reach a more distant island.
+- Mirrors can be pushed without changing their orientation, including across stepping-stones, to reposition teleport routes.
+- Boulders pushed into water become walkable stepping-stones. Other boulders and mirrors can be pushed across them.
 
 ## Monsters and combat
 
