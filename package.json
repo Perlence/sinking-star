@@ -1,0 +1,8 @@
+{
+  "name": "sinking-star",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "node-screenshots": "^0.2.8"
+  }
+}

@@ -4,7 +4,5 @@ board.png
 # Portable AutoHotkey runtime
 .tools/
 
-# Python caches and environments
-__pycache__/
-*.py[cod]
-.venv/
+# Node dependencies
+node_modules/

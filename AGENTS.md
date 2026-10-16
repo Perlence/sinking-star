@@ -14,14 +14,9 @@ Order of the Sinking Star is a Sokoban-like puzzle video game. See the accumulat
 
 ## Automation
 
-- Use `game.py` for key sequences and screenshots. Chain execution and image reading in one `codemode` call to reduce overhead. Example:
-  ```js
-  const r = await tools.bash({command: "uv run game.py wasd", timeout: 20});
-  if (r.exit_code !== 0) throw new Error(r.output);
-  image(await tools.read({path: "board.png"}));
-  ```
-- Run `uv run game.py` without keys for a screenshot only.
-- Check screenshots after meaningful batches. A successful script exit does not prove every intended move succeeded.
+- Install dependencies with `npm ci`. The project extension provides the `game` tool.
+- Call `game({ input: "wasd" })` directly for keys and a screenshot, or `game({})` for a screenshot only.
+- Check screenshots after meaningful batches. A successful tool call does not prove every intended move succeeded.
 
 ## Controls
 

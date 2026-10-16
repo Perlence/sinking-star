@@ -15,7 +15,7 @@ Main() {
     global KEY_HOLD_MS, KEY_GAP_MS, FOCUS_DELAY_MS, MESSAGE_TIMEOUT_MS
 
     if A_Args.Length != 1 || !RegExMatch(A_Args[1], "^[wasdczrxvf123456789]+$") {
-        FileAppend("Use game.py to run this helper`n", "**")
+        FileAppend("Use the game tool to run this helper`n", "**")
         ExitApp(2)
     }
     target := 0
