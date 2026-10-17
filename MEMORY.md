@@ -34,6 +34,7 @@
 ### Bard (pink)
 
 - Bard makes characters, monsters, and crystals within two tiles in both axes mirror her successful moves. Plants stay rooted. Her influence passes through walls, but affected objects still collide with walls. A blocked Bard move does not move them.
+- Bard can move submerged stepping-stones between water tiles, but not back onto land. She cannot ride one across open water. Block its mirrored move against the shore before stepping onto it, then reposition it from land to reuse it for another crossing.
 - A rooted plant can block a controlled object while Bard moves out of its range. Druid can crystallize the plant for transport by Bard, then restore it as a stationary obstacle.
 - Druid does not transmute a plant when a mirrored move under Bard's influence sends him into it.
 - All living objects and crystals under Bard's influence can move together, each entering a tile another vacates. Bard can also enter those vacated tiles on the same move.
