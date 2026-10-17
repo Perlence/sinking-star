@@ -53,6 +53,7 @@
 
 - Tall foreground walls can hide walkable tiles and exits. Test uncertain tiles rather than treating the rendered wall top as the grid boundary.
 - Crystals can hold buttons down.
+- Buttons can be hidden beneath creatures or objects; move the occupant to reveal them.
 - Goblins can hold pressure buttons down. Keep one alive when its button is needed to open an exit route.
 - Buttons and gates are color-coded: buttons control gates of the matching color. Distinguish close shades rather than treating similar-looking colors as one group.
 - Some gates require multiple buttons to be pressed simultaneously.
@@ -75,6 +76,7 @@
 - X can teleport an adjacent crystal or retrieve a distant crystal through its adjacent mirror image. It also teleports the character if they have a valid projection; a crystal blocking their sightline can keep them in place.
 - Mirrors can be pushed without changing their orientation, including across stepping-stones, to reposition teleport routes. Leave room to stand behind a mirror when it must be pushed back later.
 - Boulders and crystals pushed into water become walkable stepping-stones. A crystal teleported into water does too, creating a landing tile for a later character teleport. Other objects, including mirrors, can be pushed across them.
+- Colored bridges over water are walkable when glowing, not when retracted. One button can control bridges with opposite activation states. Retracting a bridge beneath a crystal removes it as a fire shield.
 
 ## Monsters and combat
 
@@ -82,6 +84,7 @@
 - Goblins also kill each other when orthogonally adjacent. Push them with a crystal between the pusher and goblin to stay outside their attack range; pushing them against a wall does not crush them.
 - Goblin combat can eliminate three at once: push one into a tile orthogonally adjacent to two others. Avoid eliminating a pair prematurely and leaving a lone survivor.
 - Dragons attack along the row or column they face. Crystals block their fire and can shield a character pushing from the opposite side.
+- Dragon fire crosses water and retracted bridges. It can kill another dragon holding a distant pressure button, releasing the button.
 - A goblin killed by dragon fire blocks that fire for the rest of the turn.
 - A goblin immediately in front of a dragon can kill it while simultaneously dying to its fire. Push the dragon sideways into this alignment to eliminate both.
 - Opposing dragons can kill each other simultaneously. Keep a crystal between them while arranging them, then pull it out of their shared fire lane.
@@ -98,3 +101,4 @@
 - Push a chain of two crystals when a single-crystal push would leave Warrior adjacent to a goblin. The extra crystal keeps Warrior one tile farther away.
 - A crystal at the intersection of two dragon fire lanes can block both, allowing safe passage beyond it.
 - Directional gates supply pushes that characters cannot perform themselves. Alternate switches to move objects along a series of gates, or use a gate to push a crystal onto a boundary-row button.
+- Shield a creature on a pressure button with a crystal on a retractable bridge. After the characters leave the area, retract the bridge remotely to remove the shield and let a dragon kill the button's occupant.
