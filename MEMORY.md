@@ -105,3 +105,5 @@
 - A crystal at the intersection of two dragon fire lanes can block both, allowing safe passage beyond it.
 - Directional gates supply pushes that characters cannot perform themselves. Alternate switches to move objects along a series of gates, or use a gate to push a crystal onto a boundary-row button.
 - Shield a creature on a pressure button with a crystal on a retractable bridge. After the characters leave the area, retract the bridge remotely to remove the shield and let a dragon kill the button's occupant.
+- Warrior can push Priestess and a dragon as a chain, keeping her between him and its fire while moving the dragon against its facing direction.
+- Priestess can stand between opposing dragons to delay their mutual destruction. If one holds a bridge-retracting button, stepping out of their fire lane can kill both and restore the bridge beneath her destination on that same move.
