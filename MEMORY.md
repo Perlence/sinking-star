@@ -107,3 +107,4 @@
 - Shield a creature on a pressure button with a crystal on a retractable bridge. After the characters leave the area, retract the bridge remotely to remove the shield and let a dragon kill the button's occupant.
 - Warrior can push Priestess and a dragon as a chain, keeping her between him and its fire while moving the dragon against its facing direction.
 - Priestess can stand between opposing dragons to delay their mutual destruction. If one holds a bridge-retracting button, stepping out of their fire lane can kill both and restore the bridge beneath her destination on that same move.
+- Relay Priestess between separate goblin attack zones using two threatened allies. Warrior can push her out over water, then Thief can enter an attacked water tile on her opposite side. With both allies adjacent to Priestess, Warrior can retreat to land while Thief sustains her protection, then pulls her onto the far shore.
