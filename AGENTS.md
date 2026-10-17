@@ -1,4 +1,4 @@
-# Order of the Sinking Star bot
+# Order of the Sinking Star automaton
 
 Order of the Sinking Star is a Sokoban-like puzzle video game. See the accumulated game knowledge in `MEMORY.md`.
 
