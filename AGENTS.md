@@ -36,3 +36,5 @@ Order of the Sinking Star is a Sokoban-like puzzle video game. See the accumulat
 - Overhead view: Tab (in Overworld)
 - Local area view Q (in Overworld)
 - Level preview: Space (in Overworld)
+
+This is the complete set of controls. There's nothing more. Really.
