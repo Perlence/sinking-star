@@ -30,7 +30,7 @@
 ### Priestess (yellow)
 
 - Priestess priestess can survive adjacent goblin attacks and walk through dragon fire, but cannot push crystals. She also protects orthogonally adjacent allies from goblins and dragon fire; diagonal adjacency does not protect them. Moving her away can immediately expose an ally to a fatal attack.
-- Priestess can cross water while in a dragon's fire lane. Stepping out of the fire onto unprotected water drowns her; use land to turn between separate fire lanes.
+- Priestess can cross water while in a dragon's fire lane or orthogonally adjacent to a goblin. Stepping onto water outside both attack zones drowns her. Chain goblin attack zones across gaps, and use land or goblin adjacency to turn between separate fire lanes.
 
 ### Bard (pink)
 
