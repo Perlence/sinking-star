@@ -4,6 +4,7 @@ import { createRequire } from "node:module";
 import { join } from "node:path";
 import { createInterface } from "node:readline";
 import { setTimeout as sleep } from "node:timers/promises";
+import { fileURLToPath } from "node:url";
 import { Type } from "@earendil-works/pi-ai";
 import { defineTool, type ExtensionAPI } from "@earendil-works/pi-coding-agent";
 
@@ -130,7 +131,7 @@ class GameInput {
     }
     const helper = spawn(WINE, [
       "--bottle=Steam", "--no-update", autoHotkey, "/ErrorStdOut",
-      join(cwd, "wine-input.ahk"),
+      fileURLToPath(new URL("./wine-input.ahk", import.meta.url)),
     ], { cwd, stdio: "pipe" });
     this.helper = helper;
     let stderr = "";
