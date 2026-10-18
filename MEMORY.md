@@ -76,9 +76,10 @@
 - With multiple valid mirror images, X replaces a character or crystal with a real copy at each reflected destination. Existing copies can split again, so two mirrors can create more than two copies over successive uses.
 - Mirror-created copies share movement inputs, but a blocked copy stays still while others move. Use island edges or walls to adjust their relative positions and fill separate exits.
 - X activates mirrors globally, including reflections of unselected characters and crystals. Keep characters out of mirror alignment when they must stay in place.
+- Mirror teleports resolve simultaneously; evaluate hazards and protection at the destinations.
 - A blocked reflection can prevent other mirrors from activating. Interrupt the offending sightline with a character or crystal whose reflected destination is clear.
-- X can teleport an adjacent crystal or retrieve a distant crystal through its adjacent mirror image. It also teleports the character if they have a valid projection; a crystal blocking their sightline can keep them in place.
-- Mirrors can be pushed without changing their orientation, including across stepping-stones, to reposition teleport routes. Leave room to stand behind a mirror when it must be pushed back later.
+- X can teleport an adjacent crystal or monster, or retrieve a distant crystal through its adjacent mirror image. It also teleports the character if they have a valid projection; a crystal blocking their sightline can keep them in place.
+- Mirrors can be pushed or pulled without changing their orientation, including across stepping-stones, to reposition teleport routes. Leave room to stand behind a mirror when it must be pushed back later.
 - Boulders and crystals pushed into water become walkable stepping-stones. A crystal teleported into water does too, creating a landing tile for a later character teleport. Other objects, including mirrors, can be pushed across them.
 - Colored bridges over water are walkable when glowing, not when retracted. One button can control bridges with opposite activation states. Retracting a bridge beneath a crystal removes it as a fire shield.
 
