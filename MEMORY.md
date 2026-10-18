@@ -78,6 +78,7 @@
 - With multiple valid mirror images, X replaces a character or crystal with a real copy at each reflected destination. Existing copies can split again, so two mirrors can create more than two copies over successive uses.
 - Two crystals reflected onto the same empty tile merge into one when X is pressed. This can remove excess crystallized plants and clear mirror sightlines.
 - Mirror-created copies share movement inputs, but a blocked copy stays still while others move. Use island edges or walls to adjust their relative positions and fill separate exits.
+- Copies of the same character merge when multiple mirrors teleport them onto the same empty tile. Walking one copy into another does not merge them.
 - X activates mirrors globally, including reflections of unselected characters and crystals. Keep characters out of mirror alignment when they must stay in place.
 - Mirror teleports resolve simultaneously; evaluate hazards and protection at the destinations.
 - A mirror teleport can safely land on an inactive bridge if another object teleports onto its required button during the same X action. This also lets a character leave a gate tile on the turn the gate closes.
@@ -104,6 +105,7 @@
 - A sunk crystal need not connect to shore. Teleport onto it as an isolated staging point, then have another character reposition the mirror to enable a longer second teleport. Plan the landing and departure mirror positions separately.
 - Replace a character blocking an invalid mirror reflection with a crystal so the character can leave. The crystal can keep the mirror usable while shuttling between two safe reflected positions.
 - Stand between a crystal and one of its mirrors to suppress that reflection while another mirror transports the crystal. The character can teleport simultaneously along the intercepted branch. Druid can restore transported crystals to plants to keep them out of later global mirror activations.
+- Temporarily split a character to block multiple mirror sightlines at once, keeping button crystals stationary during another character's teleport. Reunite the copies through mirrors afterward.
 - Thief can pull Priestess behind her to maintain protection while crossing tiles next to goblins or along dragon fire lanes.
 - Wizard's swaps can preserve pressure-button occupancy and reposition characters without needing a walking route.
 - Use another character as an intermediate swap target when a distant crystal would otherwise prevent Wizard from stepping onto an empty tile.
