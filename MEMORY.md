@@ -94,6 +94,7 @@
 - Goblins also kill each other when orthogonally adjacent. Push them with a crystal between the pusher and goblin to stay outside their attack range; pushing them against a wall does not crush them.
 - Goblin combat can eliminate three at once: push one into a tile orthogonally adjacent to two others. Avoid eliminating a pair prematurely and leaving a lone survivor.
 - Dragons attack along the row or column they face. Crystals block their fire and can shield a character pushing from the opposite side.
+- Plain angled mirrors redirect dragon fire by 90 degrees. Reflected fire sustains Priestess over water just like direct fire.
 - Dragon fire crosses water and retracted bridges. It can kill another dragon holding a distant pressure button, releasing the button.
 - A goblin killed by dragon fire blocks that fire for the rest of the turn.
 - A goblin immediately in front of a dragon can kill it while simultaneously dying to its fire. Push the dragon sideways into this alignment to eliminate both.
@@ -107,6 +108,7 @@
 - Stand between a crystal and one of its mirrors to suppress that reflection while another mirror transports the crystal. The character can teleport simultaneously along the intercepted branch. Druid can restore transported crystals to plants to keep them out of later global mirror activations.
 - Temporarily split a character to block multiple mirror sightlines at once, keeping button crystals stationary during another character's teleport. Reunite the copies through mirrors afterward.
 - Thief can pull Priestess behind her to maintain protection while crossing tiles next to goblins or along dragon fire lanes.
+- A dragon's setup position need not be its final position. Temporary fire lanes can provide protected water access for repositioning objects.
 - Wizard's swaps can preserve pressure-button occupancy and reposition characters without needing a walking route.
 - Use another character as an intermediate swap target when a distant crystal would otherwise prevent Wizard from stepping onto an empty tile.
 - Swapping Thief with Wizard does not trigger her pull. This can relocate her without disturbing a crystal behind her on a button.
