@@ -99,7 +99,7 @@
 - Two mirrors can supply unlimited crystals: split a crystal into two safe destinations, move one copy out of mirror alignment, then retrieve the other through its adjacent image and split it again. Sink the spare copies to build a bridge.
 - A sunk crystal need not connect to shore. Teleport onto it as an isolated staging point, then have another character reposition the mirror to enable a longer second teleport. Plan the landing and departure mirror positions separately.
 - Replace a character blocking an invalid mirror reflection with a crystal so the character can leave. The crystal can keep the mirror usable while shuttling between two safe reflected positions.
-- Thief thief can pull Priestess behind her to maintain protection while crossing tiles next to goblins or along dragon fire lanes.
+- Thief can pull Priestess behind her to maintain protection while crossing tiles next to goblins or along dragon fire lanes.
 - Wizard's swaps can preserve pressure-button occupancy and reposition characters without needing a walking route.
 - Use another character as an intermediate swap target when a distant crystal would otherwise prevent Wizard from stepping onto an empty tile.
 - Swapping Thief with Wizard does not trigger her pull. This can relocate her without disturbing a crystal behind her on a button.
