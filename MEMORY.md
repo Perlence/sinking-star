@@ -6,6 +6,7 @@
 - Restarting with R can be undone with Z.
 - Unselected characters look grayish; color alone does not identify which characters are present.
 - The flower-shaped tiles were pressure buttons; the circular tiles were exits.
+- Verify completion from a clear success indication or progression to the next stage. A character disappearing or the board changing appearance is not enough.
 
 ## Characters
 
@@ -60,6 +61,7 @@
 - Goblins can hold pressure buttons down. Keep one alive when its button is needed to open an exit route.
 - Buttons and gates are color-coded: buttons control gates of the matching color. Distinguish close shades rather than treating similar-looking colors as one group.
 - Some gates require multiple buttons to be pressed simultaneously.
+- Some gates close rather than open when their buttons are pressed. The same buttons can close a land gate and activate a water bridge, so check the departure and landing tiles separately.
 - Gates close in different directions. The square frame remaining on an open gate marks its starting face; it closes perpendicular to that face, into the tile.
 - Horizontally closing gates push crystals, characters, and monsters in their closing direction. They can push chains, including a crystal into a character or goblin.
 - Top-to-bottom gates destroy crystals and goblins on their tile and disable characters when closed. Undo restores the situation. Move characters clear before using these gates to remove blocking objects.
@@ -74,9 +76,11 @@
 - Plain mirrors do not initiate teleportation themselves, but their reflective sides can redirect a rainbow mirror's projected path. The total path length after the rainbow mirror equals the character's distance from it; count every segment through subsequent mirrors.
 - Solid walls block the reflected path from a mirror to its destination. Increasing the teleport distance does not let a character jump past them.
 - With multiple valid mirror images, X replaces a character or crystal with a real copy at each reflected destination. Existing copies can split again, so two mirrors can create more than two copies over successive uses.
+- Two crystals reflected onto the same empty tile merge into one when X is pressed. This can remove excess crystallized plants and clear mirror sightlines.
 - Mirror-created copies share movement inputs, but a blocked copy stays still while others move. Use island edges or walls to adjust their relative positions and fill separate exits.
 - X activates mirrors globally, including reflections of unselected characters and crystals. Keep characters out of mirror alignment when they must stay in place.
 - Mirror teleports resolve simultaneously; evaluate hazards and protection at the destinations.
+- A mirror teleport can safely land on an inactive bridge if another object teleports onto its required button during the same X action. This also lets a character leave a gate tile on the turn the gate closes.
 - A blocked reflection can prevent other mirrors from activating. Interrupt the offending sightline with a character or crystal whose reflected destination is clear.
 - X can teleport an adjacent crystal or monster, or retrieve a distant crystal through its adjacent mirror image. It also teleports the character if they have a valid projection; a crystal blocking their sightline can keep them in place.
 - Mirrors can be pushed or pulled without changing their orientation, including across stepping-stones, to reposition teleport routes. Leave room to stand behind a mirror when it must be pushed back later.
@@ -99,6 +103,7 @@
 - Two mirrors can supply unlimited crystals: split a crystal into two safe destinations, move one copy out of mirror alignment, then retrieve the other through its adjacent image and split it again. Sink the spare copies to build a bridge.
 - A sunk crystal need not connect to shore. Teleport onto it as an isolated staging point, then have another character reposition the mirror to enable a longer second teleport. Plan the landing and departure mirror positions separately.
 - Replace a character blocking an invalid mirror reflection with a crystal so the character can leave. The crystal can keep the mirror usable while shuttling between two safe reflected positions.
+- Stand between a crystal and one of its mirrors to suppress that reflection while another mirror transports the crystal. The character can teleport simultaneously along the intercepted branch. Druid can restore transported crystals to plants to keep them out of later global mirror activations.
 - Thief can pull Priestess behind her to maintain protection while crossing tiles next to goblins or along dragon fire lanes.
 - Wizard's swaps can preserve pressure-button occupancy and reposition characters without needing a walking route.
 - Use another character as an intermediate swap target when a distant crystal would otherwise prevent Wizard from stepping onto an empty tile.
