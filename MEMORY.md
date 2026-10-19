@@ -25,6 +25,7 @@
 - Wizard wizard swaps with the first object or character along a clear row or column, even several tiles away. Walls and closed gates block this ability. Account for distant targets before moving.
 - Wizard can swap with goblins. Swapping one next to another makes them kill each other; Priestess can protect Wizard while he sets up a swap from a threatened tile.
 - Wizard can swap through metal bars, unlike solid walls. A crystal can replace him in a barred enclosure to let all characters escape.
+- Wizard's directional swap follows an angled mirror's reflected path and can exchange him with a distant boulder around a corner. Unlike an X teleport, the swap does not require equal distances on each side of the mirror.
 - Hedge walls block Wizard's swaps, unlike metal bars.
 - Wizard cannot teleport plants.
 
