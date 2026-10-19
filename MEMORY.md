@@ -80,13 +80,13 @@
 - Mirror-created copies share movement inputs, but a blocked copy stays still while others move. Use island edges or walls to adjust their relative positions and fill separate exits.
 - Copies of the same character merge when multiple mirrors teleport them onto the same empty tile. Walking one copy into another does not merge them.
 - X activates mirrors globally, including reflections of unselected characters and crystals. Keep characters out of mirror alignment when they must stay in place.
-- Mirror teleports resolve simultaneously; evaluate hazards and protection at the destinations.
+- Mirror teleports resolve simultaneously; evaluate hazards and protection at the destinations. An object whose reflection is blocked before X stays put even if that action removes the blocker; the cleared path becomes usable on a later X.
 - A mirror teleport can safely land on an inactive bridge if another object teleports onto its required button during the same X action. This also lets a character leave a gate tile on the turn the gate closes.
 - A blocked reflection can prevent other mirrors from activating. Interrupt the offending sightline with a character or crystal whose reflected destination is clear.
 - X can teleport an adjacent crystal or monster, or retrieve a distant crystal through its adjacent mirror image. It also teleports the character if they have a valid projection; a crystal blocking their sightline can keep them in place.
 - Mirrors can be pushed or pulled without changing their orientation, including across stepping-stones, to reposition teleport routes. Leave room to stand behind a mirror when it must be pushed back later.
 - Mirrors pushed into water sink without creating stepping-stones.
-- Boulders and crystals pushed into water become walkable stepping-stones. A crystal teleported into water does too, creating a landing tile for a later character teleport. Other objects, including mirrors, can be pushed across them.
+- Boulders and crystals pushed into water become walkable stepping-stones. A crystal teleported into water does too, creating a landing tile for a later character teleport. Other objects, including mirrors, can be pushed across them. Submerged crystals do not obstruct mirror sightlines.
 - Colored bridges over water are walkable when glowing, not when retracted. One button can control bridges with opposite activation states. Retracting a bridge beneath a crystal removes it as a fire shield.
 
 ## Monsters and combat
