@@ -105,6 +105,7 @@
 ## Reusable tactics
 
 - Two mirrors can supply unlimited crystals: split a crystal into two safe destinations, move one copy out of mirror alignment, then retrieve the other through its adjacent image and split it again. Sink the spare copies to build a bridge.
+- Mirror setups can give buttons different activation patterns under the same global X input, including toggling some while keeping others held.
 - A sunk crystal need not connect to shore. Teleport onto it as an isolated staging point, then have another character reposition the mirror to enable a longer second teleport. Plan the landing and departure mirror positions separately.
 - Replace a character blocking an invalid mirror reflection with a crystal so the character can leave. The crystal can keep the mirror usable while shuttling between two safe reflected positions.
 - Stand between a crystal and one of its mirrors to suppress that reflection while another mirror transports the crystal. The character can teleport simultaneously along the intercepted branch. Druid can restore transported crystals to plants to keep them out of later global mirror activations.
