@@ -3,7 +3,7 @@
 #NoTrayIcon
 
 KEY_HOLD_MS := 50
-KEY_GAP_MS := 350
+KEY_GAP_MS := 100
 MESSAGE_TIMEOUT_MS := 1000
 
 ; Run using portable AutoHotkey64.exe in the game's CrossOver bottle.
