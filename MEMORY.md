@@ -64,7 +64,7 @@
 - Some gates close rather than open when their buttons are pressed. The same buttons can close a land gate and activate a water bridge, so check the departure and landing tiles separately.
 - Gates close in different directions. The square frame remaining on an open gate marks its starting face; it closes perpendicular to that face, into the tile.
 - Horizontally closing gates push crystals, characters, and monsters in their closing direction. They can push chains, including a crystal into a character or goblin.
-- Top-to-bottom gates destroy crystals and goblins on their tile and disable characters when closed. Undo restores the situation. Move characters clear before using these gates to remove blocking objects.
+- Top-to-bottom gates destroy crystals, goblins, and mirrors on their tile and disable characters when closed. Undo restores the situation. Move characters clear before using these gates to remove blocking objects.
 - Do not assume purple gates require clearing all monsters. They can be open with a living goblin elsewhere on the board.
 - Exits do not require clearing every crystal; leave irrelevant crystals in place.
 - Crystallized monsters retain their identity: Warrior can transport a crystallized dragon, and Druid can restore it with its original fire direction.
@@ -85,6 +85,7 @@
 - A blocked reflection can prevent other mirrors from activating. Interrupt the offending sightline with a character or crystal whose reflected destination is clear.
 - X can teleport an adjacent crystal or monster, or retrieve a distant crystal through its adjacent mirror image. It also teleports the character if they have a valid projection; a crystal blocking their sightline can keep them in place.
 - Mirrors can be pushed or pulled without changing their orientation, including across stepping-stones, to reposition teleport routes. Leave room to stand behind a mirror when it must be pushed back later.
+- Mirrors pushed into water sink without creating stepping-stones.
 - Boulders and crystals pushed into water become walkable stepping-stones. A crystal teleported into water does too, creating a landing tile for a later character teleport. Other objects, including mirrors, can be pushed across them.
 - Colored bridges over water are walkable when glowing, not when retracted. One button can control bridges with opposite activation states. Retracting a bridge beneath a crystal removes it as a fire shield.
 
@@ -116,6 +117,7 @@
 - Push a chain of two crystals when a single-crystal push would leave Warrior adjacent to a goblin. The extra crystal keeps Warrior one tile farther away.
 - A crystal at the intersection of two dragon fire lanes can block both, allowing safe passage beyond it.
 - Directional gates supply pushes that characters cannot perform themselves. Alternate switches to move objects along a series of gates, or use a gate to push a crystal onto a boundary-row button.
+- Use a mirror on an open crushing gate as a temporary teleport route. After crossing, close the gate to destroy that mirror, then reopen it to clear a longer sightline to another mirror.
 - Shield a creature on a pressure button with a crystal on a retractable bridge. After the characters leave the area, retract the bridge remotely to remove the shield and let a dragon kill the button's occupant.
 - Warrior can push Priestess and a dragon as a chain, keeping her between him and its fire while moving the dragon against its facing direction.
 - Priestess can stand between opposing dragons to delay their mutual destruction. If one holds a bridge-retracting button, stepping out of their fire lane can kill both and restore the bridge beneath her destination on that same move.
