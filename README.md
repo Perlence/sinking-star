@@ -7,15 +7,18 @@ Watch the video:
 ## Prerequisites
 
 - [Order of the Sinking Star](https://store.steampowered.com/app/499170/Order_of_the_Sinking_Star/)
-- [CrossOver](https://www.codeweavers.com/crossover)
+- [GeForce NOW](https://play.geforcenow.com/)
+- A Chromium-based browser
+- Node.js and npm
 - [Pi](https://pi.dev/)
 
 ## Quick start
 
-1. Launch the game
-2. Start the puzzle
-3. Launch Pi in the repo folder
-4. Tell it, "Please solve this one"
+1. Run `npm ci` in the repo folder.
+2. Enable remote debugging at chrome://inspect/#remote-debugging.
+3. Launch the game at [GeForce NOW](https://play.geforcenow.com/) in the browser and start a puzzle.
+4. Launch Pi in the repo folder and tell it, "Please solve this one."
+5. Approve the debugging connection in the browser if prompted.
 
 ## Recommended models
 
