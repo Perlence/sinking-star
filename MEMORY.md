@@ -98,6 +98,8 @@
 - Goblin combat can eliminate three at once: push one into a tile orthogonally adjacent to two others. Avoid eliminating a pair prematurely and leaving a lone survivor.
 - Dragons attack along the row or column they face. Crystals block their fire and can shield a character pushing from the opposite side.
 - Plain angled mirrors redirect dragon fire by 90 degrees. Reflected fire sustains Priestess over water just like direct fire.
+- Teleporting a dragon through an angled rainbow mirror also reflects its facing direction. Use this to reorient its fire without Bard.
+- A dragon teleported into water fires on its arrival turn before drowning. This can kill a distant goblin across the water while also removing the dragon.
 - Dragon fire crosses water and retracted bridges. It can kill another dragon holding a distant pressure button, releasing the button.
 - A goblin killed by dragon fire blocks that fire for the rest of the turn.
 - A goblin immediately in front of a dragon can kill it while simultaneously dying to its fire. Push the dragon sideways into this alignment to eliminate both.
