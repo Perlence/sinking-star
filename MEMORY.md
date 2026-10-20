@@ -91,6 +91,14 @@
 - Boulders and crystals pushed into water become walkable stepping-stones. A crystal teleported into water does too, creating a landing tile for a later character teleport. Other objects, including mirrors, can be pushed across them. Submerged crystals do not obstruct mirror sightlines.
 - Colored bridges over water are walkable when glowing, not when retracted. One button can control bridges with opposite activation states. Retracting a bridge beneath a crystal removes it as a fire shield.
 
+## Skipping stones and lily pads
+
+- In the Skipping Stones area, boulders pushed into water travel straight rather than immediately sinking. An upright blocking boulder makes an incoming stone sink on the preceding water tile, creating a walkable stepping-stone.
+- A skipping stone reaching an already-submerged boulder lands on top of it rather than continuing past it. Repeated throws do not automatically extend a bridge.
+- A skipping stone landing directly on a lily rides it and propels it forward until blocked by shore or an obstacle.
+- A skipping stone passing beside a lily pushes it sideways, away from the stone's path, even while the lily carries a boulder. This can redirect a loaded lily perpendicular to the incoming stone's travel.
+- A boulder on a lily can stop an incoming stone to create an adjacent stepping-stone. Once reachable, the carried boulder can be pushed off and reused while the lily stays in place as a walkable tile.
+
 ## Monsters and combat
 
 - Goblins kill a character on an orthogonally adjacent tile. Diagonally adjacent tiles are safe, so route around their occupied tiles and four neighboring tiles.
