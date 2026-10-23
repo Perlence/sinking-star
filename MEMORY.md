@@ -91,6 +91,15 @@
 - Boulders and crystals pushed into water become walkable stepping-stones. A crystal teleported into water does too, creating a landing tile for a later character teleport. Other objects, including mirrors, can be pushed across them. Submerged crystals do not obstruct mirror sightlines.
 - Colored bridges over water are walkable when glowing, not when retracted. One button can control bridges with opposite activation states. Retracting a bridge beneath a crystal removes it as a fire shield.
 
+## Beamcasters
+
+- Beamcasters can be pushed and pulled, but their beam direction stays fixed; they cannot be rotated.
+- A beamcaster is lit only while every gem slot in its room is filled. Heroes can move gems, but removing one from its slot disables the beam.
+- Beams pass through walls. Closed gates, gems, boulders, other beamcasters, and the backs of mirrors stop them.
+- Heroes, monsters, and crystals standing in a beam gain its color only while illuminated.
+- Green beams allow entry into walls, checking only the destination tile. A hero already inside a wall can safely stay there after the beam moves away. To move again, the hero needs an open destination or a wall tile currently lit green.
+- Park a hero inside a wall while another hero repositions the caster, then bring the beam back to the next required destination. The beam does not have to stay on the waiting hero or sweep continuously past intervening blockers. To advance sideways through a wall, alternate moving the caster one tile and stepping the hero into the newly illuminated tile.
+
 ## Skipping stones and lily pads
 
 - In the Skipping Stones area, boulders pushed into water travel straight rather than immediately sinking. An upright blocking boulder makes an incoming stone sink on the preceding water tile, creating a walkable stepping-stone.
